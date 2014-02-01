@@ -1,11 +1,32 @@
+@font-face {
+	font-family: azureus;
+    src: url('../fonts/UTSAAH.TTF');
+}
+
+@font-face {
+	font-family: azureusBold;
+    src: url('../fonts/UTSAAHB.TTF');
+}
+
+@font-face {
+	font-family: azureusTitle;
+    src: url('../fonts/Chunkfive Ex.ttf');
+}
+
 *{
-	font-family:impact;
+	font-family:azureus;
 	padding:0;
 	margin:0;
 }
 
+html{
+	height:100%;
+}
+
 body{
-	background-color:grey;
+    background: -moz-linear-gradient(center top, #5a5a5a 0%, #676767) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	font-size:1.2em;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 0 0 rgba(255, 255, 255, 0);
 }
 
 a, a:hover, a:visited{
@@ -18,23 +39,19 @@ a, a:hover, a:visited{
 }
 
 .title{
+	font-family:azureusTitle;
 	text-align:center;
-	font-size:1.4em;
-	background-color:#02778e;
+	font-size:2.1em;
 	padding:10px;
-	background: -moz-linear-gradient(center top , #B9C5DD 0%, #A4B0CB) repeat scroll 0 0 rgba(0, 0, 0, 0);
     border: 1px solid #737B8D;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 1), 0 0 0 rgba(255, 255, 255, 0);
     color: #FFFFFF;
-    display: table;
     font-weight: 500;
     letter-spacing: 1px;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 0 0 rgba(255, 255, 255, 0);
-	width:100%;
 }
 
 .initialImage{
-	margin-top:110px;
+	margin-top:85px;
 	margin-left:45px;
 }
 
@@ -45,13 +62,14 @@ a, a:hover, a:visited{
 }
 
 .startGame, .exit{
-	background-color:green;
+	background-color:#00ff40;
 	text-align:center;
 	padding:5px 15px 5px 15px;
 	margin:10px 0 10px 0;
 	width:120px;
 	font-size:1.2em;
-	border-radius:5px;
+	border-radius:2px;
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
 }
 
 .startGame:hover, .exit:hover{
@@ -61,7 +79,7 @@ a, a:hover, a:visited{
 	margin:10px 0 10px 0;
 	width:120px;
 	font-size:1.2em;
-	border-radius:5px;
+	border-radius:2px;
 }
 
 #mascara{
@@ -75,8 +93,8 @@ a, a:hover, a:visited{
 
 #modalExit{
     display:none;
-    width:120px;
-    height:50px;
+    width:130px;
+    height:60px;
     position:absolute;
     left:0;
     top:0;
@@ -90,7 +108,7 @@ a, a:hover, a:visited{
 #modalPause{
 	display:none;
     width:120px;
-    height:82px;
+    height:105px;
     position:absolute;
     left:0;
     top:0;
@@ -103,59 +121,81 @@ a, a:hover, a:visited{
 
 .closeApp{
 	margin-bottom:8px;
+	margin-left:22px;
 }
 
-.confirmationButtons{
-	background-color:red;
+#no{
+	background-color:#ff0015;
 	border-radius:2px;
 	width:50px;
 	text-align:center;
 	float:left;
-	margin-right:10px;
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+	padding:3px;
+}
+
+#yes{
+	background-color:#ff0015;
+	border-radius:2px;
+	width:50px;
+	text-align:center;
+	float:left;
+	margin-right:13px;
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+	padding:3px;
 }
 
 .pauseModalButtons{
-	background-color:red;
+	background-color:#ff0015;
 	border-radius:2px;
 	width:100px;
 	text-align:center;
 	margin-bottom:10px;
-	margin-left:10px;
+	margin-left:8px;
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+	padding:3px;
 }
 
-#yes:hover, #no:hover{
+#yes:hover{
 	background-color:#ff4d4d;
 	border-radius:2px;
 	width:50px;
 	text-align:center;
 	float:left;
-	margin-right:10px;
+	margin-right:13px;
+}
+
+#no:hover{
+	background-color:#ff4d4d;
+	border-radius:2px;
+	width:50px;
+	text-align:center;
+	float:left;
 }
 
 .buttonPause{
 	position:absolute;
-	margin:5px;
-	right:0;
-	top:0;
+	right:2px;
+	top:2px;
 	z-index:9001;
+	padding:2px;
 }
 
 #time{
 	background-color:#8defa7;
 	letter-spacing: 1px;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 0 0 rgba(255, 255, 255, 0);
 	position:absolute;
 	top:0;
 	left:0;
 	z-index:9000;
 	width:100%;
 	padding:3px;
+	padding-left:6px;
 }
 
 #score{
 	background-color:#8defa7;
 	letter-spacing: 1px;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 0 0 rgba(255, 255, 255, 0);
 	position:absolute;
 	top:0;
 	left:43%;
@@ -163,3 +203,42 @@ a, a:hover, a:visited{
 	padding:3px;
 }
 
+#skip{
+	position:absolute;
+	top:7px;
+	left:80px;
+	font-size:0.8em;
+}
+
+#tips1{
+	display:none;
+	position:absolute;
+	top:100px;
+	left:30px;
+	color:white;
+	font-size:2em;
+	font-family:azureusBold;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 1), 0 0 0 rgba(255, 255, 255, 0);
+}
+
+#tips2{
+	display:none;
+	position:absolute;
+	top:160px;
+	right:30px;
+	color:white;
+	font-size:2em;
+	font-family:azureusBold;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 1), 0 0 0 rgba(255, 255, 255, 0);
+}
+
+#go{
+	display:none;
+	position:absolute;
+	top:240px;
+	left:25px;
+	color:#ffff1a;
+	font-size:10.5em;
+	font-family:azureusBold;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5), 0 0 0 rgba(255, 255, 255, 0);
+}

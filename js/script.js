@@ -84,8 +84,8 @@ function confirmLeaveGame(){
 	}
 }
 
-$("#resume").click(function(){
-	$(document).ready( function() { $("#modalPause").css("display","none"); } );
+$("#resume, #mascara").click(function(){
+	$(document).ready( function() { $("#modalPause, #modalExit").css("display","none"); } );
 	$(document).ready( function() { $("#mascara").css("display","none"); } );
 	timetoOver = setTimeout(function(){	
 		confirmGameOver(score);
@@ -101,4 +101,14 @@ $("#exitToMenu").click(function(){
 
 $("#leaveGame").click(function(){
 	confirmLeaveGame();
+});
+
+$(document).ready(function(){
+	$("#tips1").fadeIn(1500);
+	$("#tips2").delay(1600).fadeIn(1500);
+	$("#go").delay(3100).fadeIn(200);
+});
+
+$("#pageTips").click(function(){
+	location.href = "game.html";
 });

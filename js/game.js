@@ -2,10 +2,10 @@ function confirmGameOver(score){
 	var r = confirm("Game Over.\nYour score is: " + score + ". Play again?");
 	
 	if (r==true){
-		location.href="game.html"
+		location.href="game.html";
 	}
 	else{
-		location.href="index.html"
+		location.href="index.html";
 	}
 }
 
@@ -44,7 +44,7 @@ game.onload = function(){
 			this.image = game.assets['images/enemy.png'];
 			this.moveTo(Math.floor(Math.random() * width), height); 
             this.scaleX = -1;
-            this.tl.moveBy(0, -height-height/8, height*Math.random()/1.1);
+            this.tl.moveBy(0, -height-height/8, height * (Math.random()%0.6) / 1.1);
 			game.rootScene.addChild(this);
 		}
 	});
@@ -55,7 +55,7 @@ game.onload = function(){
 			this.image = game.assets['images/ally.png'];
 			this.moveTo(Math.floor(Math.random() * width), height); 
             this.scaleX = -1;
-            this.tl.moveBy(0, -height-height/8, height*Math.random()/1.4);
+            this.tl.moveBy(0, -height-height/8, height * (Math.random()%0.6) / 1.4);
 			game.rootScene.addChild(this);
 		}
 	});
@@ -66,7 +66,7 @@ game.onload = function(){
 		var enemy = new Enemy();
 		if (paused)
 			game.pause();
-	}).delay(Math.random() + 2).loop();
+	}).delay(Math.random()).loop();
 
 	game.rootScene.tl.then(function() {
 		var ally = new Ally();
