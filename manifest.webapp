@@ -1,0 +1,23 @@
+{
+  "version": "1.0",
+  "name": "Azureus",
+  "launch_path": "/index.html",
+  "description": "Kill all the ferrets and do not allow to reach the Dendrobates azureus",
+  "icons": {
+    "32": "/images/azureus32.png",
+	"128": "/images/azureus128.png"
+  },
+  "developer": {
+    "name": "Marcus Vinícius"
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "en",
+  "locales": {
+    "en": {
+      "name": "Azureus",
+      "description": "Kill all the ferrets and do not allow to reach the Dendrobates azureus"
+    }
+  }
+}
