@@ -1,5 +1,5 @@
 function confirmGameOver(score){
-	var r = confirm("Game Over.\nYour score is: " + score + ". Play again?");
+	var r = confirm("Game Over.\nYour score: " + score + ". Play again?");
 	
 	if (r==true){
 		location.href="game.html";
@@ -13,7 +13,6 @@ enchant();
 var width = screen.width + 15;
 var height = screen.height;
 var game = new Core(width, height);
-width = width - 50;
 game.preload('images/player.png', 'images/attack.png', 'images/enemy.png', 'images/ally.png');
 game.fps = 20;
 
@@ -44,7 +43,7 @@ game.onload = function(){
 			this.image = game.assets['images/enemy.png'];
 			this.moveTo(Math.floor(Math.random() * width), height); 
             this.scaleX = -1;
-            this.tl.moveBy(0, -height-height/8, height * (Math.random()%0.6) / 1.1);
+            this.tl.moveBy(0, -height-height/8, height * ((Math.random()+50) % 0.9));
 			game.rootScene.addChild(this);
 		}
 	});
@@ -55,7 +54,7 @@ game.onload = function(){
 			this.image = game.assets['images/ally.png'];
 			this.moveTo(Math.floor(Math.random() * width), height); 
             this.scaleX = -1;
-            this.tl.moveBy(0, -height-height/8, height * (Math.random()%0.6) / 1.4);
+            this.tl.moveBy(0, -height-height/8, height * ((Math.random()+50) % 0.9));
 			game.rootScene.addChild(this);
 		}
 	});
@@ -73,7 +72,7 @@ game.onload = function(){
 		if (paused){
 			game.pause();
 		}
-	}).delay(Math.random() + 10).loop();  
+	}).delay(Math.random()*22).loop();  
 
 	game.rootScene.on('touchstart', function(evt){
 		player.x = evt.localX;
