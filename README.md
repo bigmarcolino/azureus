@@ -3,7 +3,7 @@ A simple arcade game for Firefox OS. License: BSD
 
 The ferret is one of the predators of Dendrobates azureus, so kill as much as possible. Do not kill the other frogs.
 
-## Getting Started
+## How to Run
 
 ### Prerequisites
 Firefox Browser
